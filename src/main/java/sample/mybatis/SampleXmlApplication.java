@@ -39,7 +39,7 @@ public class SampleXmlApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		City city = this.cityService.selectCityById(1);
 		System.out.println(city);
-		city.setCountry("nimeiadddddddddddddd");
+		city.setCountry("China");
 		this.cityService.updateCountryById(city);
 	}
 
