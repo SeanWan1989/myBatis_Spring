@@ -3,6 +3,7 @@ package sample.mybatis.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import sample.mybatis.service.BlogService;
 import sample.mybatis.service.CityService;
 
 /**
@@ -13,7 +14,12 @@ import sample.mybatis.service.CityService;
 public class ServiceConfig {
 
     @Bean
-    public CityService accountService() {
+    public CityService cityService() {
         return new CityService();
+    }
+
+    @Bean
+    public BlogService blogService() {
+        return new BlogService();
     }
 }
